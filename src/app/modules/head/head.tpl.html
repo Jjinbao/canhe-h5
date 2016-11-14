@@ -1,0 +1,22 @@
+<div class="swalk-head">
+    <div class="container-fluid">
+        <div class="row"  style="background: #d8e1e4 url(app/img/header-bg.png) no-repeat 0 0;">
+            <div class="head-left text-center">
+                <!--系统管理-->
+            </div>
+            <div class="head-right text-right">
+                <span>商户:{{name}}</span>
+                <img src="app/img/notice.png" class="notice-img" ng-click="showNotice()"/>
+                <a ng-click="cancel()">退出登录</a>
+                <img src="app/img/headImg.png"/>
+                <div class="point" ng-if="hotelNotice || travelNotice" ng-click="showNotice()">{{noticeText}}</div>
+                <div class="notices" ng-if="showOrHide">
+                    <div class="notice" ng-if="hotelNotice"><a ng-click="goHouseOrder()">酒店订单：有新的取消订单</a></div>
+                    <div class="notice" ng-if="travelNotice"><a ng-click="goTravelOrder()">度假订单：有新的取消订单</a></div>
+                </div>
+            </div>
+            <audio src="app/music/notice.mp3" id="music"></audio>
+
+        </div>
+    </div>
+</div>
