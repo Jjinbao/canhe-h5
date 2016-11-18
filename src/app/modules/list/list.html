@@ -1,5 +1,81 @@
 <ion-view title="列表">
-    <ion-content has-bouncing="false">
-        列表
+    <div class="list-subheader">
+        <ion-scroll scrollbar-x="false" direction="x" class="scroll-bar-h" style="height: 44px;border-bottom: 0.5px solid #dfdfdf">
+            <div ng-repeat="sort in sortList"
+                 class="list-header-item"
+                 ng-class="{true:'item-active'}[sort.id==nowItem]"
+                 ng-click="changeSortItem(sort)">
+                {{sort.name}}
+            </div>
+        </ion-scroll>
+
+    </div>
+    <ion-content scrollbar-y="false" has-bouncing="false" class="content-left" style="overflow: auto;">
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item second-item-active">
+            <span>子分类</span>
+        </div>
+        <div class="list-content-item">
+            <span>分类</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类)</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item">
+            <span>猪肉白条二级</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
+        <div class="list-content-item">
+            <span>子分类一</span>
+        </div>
     </ion-content>
+    <ion-content has-bouncing="false" class="content-right">
+        <div class="list-pro-item">
+            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+        </div>
+        <div class="list-pro-item">
+            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+        </div>
+        <div class="list-pro-item">
+            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+        </div>
+        <div class="list-pro-item">
+            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+        </div>
+        <div class="list-pro-item">
+            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+        </div>
+        <div class="list-pro-item">
+            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+        </div>
+        <div class="list-pro-item">
+            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+        </div>
+    </ion-content>
+
 </ion-view>

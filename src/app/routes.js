@@ -12,7 +12,8 @@ angular.module('canhe.route', [])
                 url: "/list",
                 views: {
                     'list-tab': {
-                        templateUrl: "app/modules/list/list.html"
+                        templateUrl: "app/modules/list/list.html",
+                        controller:'mylist'
                     }
                 }
             })
@@ -22,6 +23,15 @@ angular.module('canhe.route', [])
                 views: {
                     'mine-tab': {
                         templateUrl: "app/modules/mine/mine.html",
+                    }
+                }
+            })
+            .state('tabs.car', {
+                url: "/car",
+                cache:"false",
+                views: {
+                    'car-tab': {
+                        templateUrl: "app/modules/car/car.html",
                     }
                 }
             })

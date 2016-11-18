@@ -26,9 +26,21 @@ Number.prototype.toFixed=function (d) {
     return this + "";
 
 };
-angular.module('app', ['ionic','canhe.services','canhe.route'])
-    .controller('rooCtrl',['$scope',function($scope){
-
+angular.module('app', ['ionic','canhe.services','canhe.route','canhe.list'])
+    .controller('rooCtrl',['$rootScope','$scope',function($rootScope,$scope){
+        $rootScope.buyNum=1;
+    }])
+    .config(['$ionicConfigProvider', function ($ionicConfigProvider) {
+        $ionicConfigProvider.platform.ios.tabs.style('standard');
+        $ionicConfigProvider.platform.ios.tabs.position('bottom');
+        $ionicConfigProvider.platform.android.tabs.style('standard');
+        $ionicConfigProvider.platform.android.tabs.position('bottom');
+        $ionicConfigProvider.platform.ios.navBar.alignTitle('center');
+        $ionicConfigProvider.platform.android.navBar.alignTitle('center');
+        $ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-ios-arrow-thin-left');
+        $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');
+        $ionicConfigProvider.platform.ios.views.transition('ios');
+        $ionicConfigProvider.platform.android.views.transition('android');
     }])
     //隐藏底部导航栏
     .directive('hideTabs', function ($rootScope) {
