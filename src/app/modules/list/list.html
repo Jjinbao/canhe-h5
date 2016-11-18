@@ -1,4 +1,4 @@
-<ion-view title="列表">
+<ion-view title="产品列表">
     <div class="list-subheader">
         <ion-scroll scrollbar-x="false" direction="x" class="scroll-bar-h" style="height: 44px;border-bottom: 0.5px solid #dfdfdf">
             <div ng-repeat="sort in sortList"
@@ -11,70 +11,28 @@
 
     </div>
     <ion-content scrollbar-y="false" has-bouncing="false" class="content-left" style="overflow: auto;">
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item second-item-active">
-            <span>子分类</span>
-        </div>
-        <div class="list-content-item">
-            <span>分类</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类)</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item">
-            <span>猪肉白条二级</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
-        </div>
-        <div class="list-content-item">
-            <span>子分类一</span>
+        <div class="list-content-item"
+             ng-repeat="subitem in secondList"
+             ng-class="{true:'second-item-active'}[secondItem==subitem.id]" ng-click="changeSecondItem(subitem)">
+            <span>{{subitem.name}}</span>
         </div>
     </ion-content>
     <ion-content has-bouncing="false" class="content-right">
         <div class="list-pro-item">
-            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+            <img src="app/img/touming.jpg">
+            <div class="list-pro-title">
+                圆形一次性餐盒1000ML塑料透明圆碗外卖
+            </div>
         </div>
-        <div class="list-pro-item">
+        <div class="list-pro-item" ng-repeat="pro in proList">
             <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
-        </div>
-        <div class="list-pro-item">
-            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
-        </div>
-        <div class="list-pro-item">
-            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
-        </div>
-        <div class="list-pro-item">
-            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
-        </div>
-        <div class="list-pro-item">
-            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
-        </div>
-        <div class="list-pro-item">
-            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+            <div class="list-pro-title">
+                {{pro.name}}
+            </div>
+            <div class="list-pro-price">
+                ￥{{pro.price}}
+            </div>
+            <div class="icon ion-ios-cart icon-buy-addcar"></div>
         </div>
     </ion-content>
 
