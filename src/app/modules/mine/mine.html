@@ -1,5 +1,36 @@
 <ion-view view-title="我的">
     <ion-content has-bouncing="false">
-        111<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>2222
+        <div class="mine-header-banner">
+            <div ng-show="false" class="not-login">未登入</div>
+            <div class="had-login">18210596067<p>普通会员</p></div>
+        </div>
+        <div class="mine-list-items">
+            <div class="mine-item">
+                我的订单
+                <span class="icon ion-ios-arrow-right mine-order-page"></span>
+                <span class="mine-order-page" style="font-size: 14px;color: orangered;">1个订单等待处理</span>
+            </div>
+            <div class="mine-col">
+                <div class="mine-grid">
+                    <span class="icon ion-ios-star" style="font-size: 20px;color: orangered;margin-right: 10px;"></span>
+                    <span class="mine-grid-title">我的采购积分</span>
+                    <p>100</p>
+                </div>
+                <div class="mine-grid"  style="border-left: 0.5px solid #CCCCCC">
+                    <span class="icon ion-ios-pricetag" style="font-size: 20px;color: orangered;margin-right: 10px;"></span><span  class="mine-grid-title">我的优惠券</span>
+                    <p></p>
+                </div>
+            </div>
+            <div class="mine-col">
+                <div class="mine-grid">
+                    <span class="icon ion-ios-location" style="font-size: 20px;color: orangered;margin-right: 10px;"></span><span  class="mine-grid-title">我的地址</span>
+                    <p>管理收货地址</p>
+                </div>
+                <div class="mine-grid" style="border-left: 0.5px solid #CCCCCC">
+                    <span class="icon ion-ios-cart" style="font-size: 20px;color: orangered;margin-right: 10px;"></span><span  class="mine-grid-title">采购车</span>
+                    <p>查看采购单</p>
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

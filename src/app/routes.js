@@ -17,12 +17,19 @@ angular.module('canhe.route', [])
                     }
                 }
             })
+            //商品详情
+            .state('detail',{
+                url:"/detail",
+                templateUrl:"app/modules/detail/detail.html",
+                controller:"proDetail"
+            })
             .state('tabs.mine', {
                 url: "/mine",
                 cache:"false",
                 views: {
                     'mine-tab': {
                         templateUrl: "app/modules/mine/mine.html",
+                        controller:'mine'
                     }
                 }
             })

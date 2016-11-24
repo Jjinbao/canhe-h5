@@ -1,5 +1,4 @@
 'use strict'
-
 Number.prototype.toFixed=function (d) {
     var s = this + "";
     if (!d)d = 0;
@@ -26,9 +25,13 @@ Number.prototype.toFixed=function (d) {
     return this + "";
 
 };
-angular.module('app', ['ionic','canhe.services','canhe.route','canhe.list'])
-    .controller('rooCtrl',['$rootScope','$scope',function($rootScope,$scope){
+angular.module('app', ['ionic','canhe.services','canhe.route','canhe.list','canher.mine','canher.detail'])
+    .controller('rooCtrl',['$rootScope','$scope','$ionicHistory','$ionicViewSwitcher',function($rootScope,$scope,$ionicHistory,$ionicViewSwitcher){
         $rootScope.buyNum=1;
+        $scope._goback = function(val){
+            $ionicHistory.goBack(val);
+            $ionicViewSwitcher.nextDirection('back');
+        };
     }])
     .config(['$ionicConfigProvider', function ($ionicConfigProvider) {
         $ionicConfigProvider.platform.ios.tabs.style('standard');

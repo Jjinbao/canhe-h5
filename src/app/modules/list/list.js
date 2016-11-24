@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('canhe.list', [])
-    .controller('mylist', ['$rootScope','$scope', function ($rootScope,$scope) {
+    .controller('mylist', ['$rootScope','$scope','$state','$ionicViewSwitcher', function ($rootScope,$scope,$state,$ionicViewSwitcher) {
         $scope.nowItem=1;
         $scope.secondItem=1;
         $scope.sortList=[
@@ -33,5 +33,10 @@ angular.module('canhe.list', [])
                 return;
             }
             $scope.secondItem=val.id;
+        }
+
+        $scope.toDetail=function(){
+            $state.go('detail',{});
+            $ionicViewSwitcher.nextDirection('forward');
         }
     }])

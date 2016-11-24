@@ -25,13 +25,16 @@
             </div>
         </div>
         <div class="list-pro-item" ng-repeat="pro in proList">
-            <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
-            <div class="list-pro-title">
-                {{pro.name}}
+            <div ng-click="toDetail()">
+                <img src="app/img/TB2xcEoaHaI.eBjSspaXXXIKpXa_!!2653351646.jpg_430x430q90.jpg">
+                <div class="list-pro-title">
+                    {{pro.name}}
+                </div>
+                <div class="list-pro-price">
+                    ￥{{pro.price}}
+                </div>
             </div>
-            <div class="list-pro-price">
-                ￥{{pro.price}}
-            </div>
+
             <div class="icon ion-ios-cart icon-buy-addcar"></div>
         </div>
     </ion-content>

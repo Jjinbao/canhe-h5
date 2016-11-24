@@ -1,0 +1,66 @@
+@import "../../common/veriables";
+
+@banner-height:250;
+.mine-header-banner{
+  position: relative;
+  width: 100%;
+  .px2rem(height,@banner-height);
+  background-color: darkorange;
+  .not-login{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .had-login{
+    .not-login;
+    text-align: center;
+    font-size: 19px;
+    p{
+      margin-top: 10px;
+      font-size: 13px;
+    }
+  }
+}
+.mine-list-items{
+  background-color: white;
+  .px2rem(margin-top,20);
+  .mine-item{
+    .px2rem(height,100);
+    .px2rem(line-height,100);
+    .px2rem(margin-left,40);
+    .mine-order-page{
+      font-size: 20px;
+      color: #CCCCCC;
+      float: right;
+      .px2rem(margin-right,20);
+    }
+  }
+  .mine-col{
+    border-top: 0.5px solid #CCCCCC;
+    .px2rem(height,150);
+    .mine-grid{
+      width: 50%;
+      .px2rem(margin-top,25);
+      .px2rem(padding-left,40);
+      .px2rem(height,100);
+      float: left;
+      position: relative;
+      .mine-grid-title{
+        position: absolute;
+        .px2rem(left,110);
+      }
+      .mine-buy-car{
+        font-size: 22px;
+      }
+      p{
+        position: absolute;
+        color: darkgrey;
+        .px2rem(margin-top,5);
+        .px2rem(margin-left,70);
+      }
+    }
+  }
+}
