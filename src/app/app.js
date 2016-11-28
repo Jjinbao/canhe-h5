@@ -25,7 +25,8 @@ Number.prototype.toFixed=function (d) {
     return this + "";
 
 };
-angular.module('app', ['ionic','canhe.services','canhe.route','canhe.list','canher.mine','canher.detail'])
+angular.module('app', ['ionic','canhe.services','canhe.route','canhe.list','canher.mine','canher.detail','canhe.orders',
+'canher.address','canher.score'])
     .controller('rooCtrl',['$rootScope','$scope','$ionicHistory','$ionicViewSwitcher',function($rootScope,$scope,$ionicHistory,$ionicViewSwitcher){
         $rootScope.buyNum=1;
         $scope._goback = function(val){

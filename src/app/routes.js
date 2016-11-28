@@ -25,13 +25,29 @@ angular.module('canhe.route', [])
             })
             .state('tabs.mine', {
                 url: "/mine",
-                cache:"false",
                 views: {
                     'mine-tab': {
                         templateUrl: "app/modules/mine/mine.html",
                         controller:'mine'
                     }
                 }
+            })
+            .state('orders',{
+                url:'/mine/order',
+                templateUrl:'app/modules/orders/order.html',
+                controller:'myOrders'
+            })
+            //收获地址
+            .state('address',{
+                url:'/mine/address',
+                templateUrl:'app/modules/address/addr.html',
+                controller:'address'
+            })
+            //积分
+            .state('score',{
+                url:'/mine/score',
+                templateUrl:'app/modules/score/score.html',
+                controller:'score'
             })
             .state('tabs.car', {
                 url: "/car",
